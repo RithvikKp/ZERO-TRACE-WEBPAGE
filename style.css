@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+} 
+
+.image-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.Tlogo{ /*The logo in front of the team name*/
+    scale: 10%;
+    position: absolute;
+    top: -18.6rem;
+    left: -20%;
+    z-index: -1;
+}
+
+.layer-blur{ /*gives glowing effect around the gradient*/
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+nav a{ /*for the ancor tagging */
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit; 
+    z-index: 999;
+}
+
+nav a:hover{
+    color: blue;
+}
+
+/* MAIN CONTENT */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content{
+    max-width: 40rem;
+    margin-left: 3%;
+    z-index: 999;
+}
+
+.tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(314deg, #77dd77 0%, #004225 74%,#004225 74%);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(00, 255, 0, 0.3);
+}
+.tittle{
+    color: green;
+    justify-content: center;
+}
+
+@keyframes animationGradient{
+    to{
+        background-position: 90%;
+    }
+}
+
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px ;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+.tag-box .tag:hover{
+    color: green;
+}
+
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(00, 255, 0, 0.3);
+}
+
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+
+.Robot-3D{
+    position: absolute;
+    scale: 1.5;
+    top: 30%;
+    right: 9.5%;
+}
+
+/* CARD VIEW  FARMER DETAILS SECTION*/
+
+.Farmer-Details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80;
+    margin-top: 20%;
+}
+
+.section-tittle{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+}
+
+.card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    border: 1px solid lightgreen;
+    background-color: #080020b7;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card img{
+    margin-top: 2%;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+
+}
+
+.card h1{
+    position: absolute;
+    margin: 0;
+    bottom: 40%;
+    left: 5%;
+    font-size: 25px;
+    z-index: 1; /*to keep it above other elements*/
+    color: lightgray;
+}
+
+.card button{
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 1px solid lightgreen;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px greenyellow;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.card button:hover{
+    box-shadow: 0 0 15px rgba(00, 255, 0, 0.3);
+    opacity: 0.7;
+}
+
+.card:hover{
+    box-shadow: 0 0 15px rgba(00, 255, 0, 0.3)
+}
+
+.card:nth-child(3){
+    grid-row: span 2;
+    height: 100%;
+}
+
+.card:nth-child(3)h1{
+    bottom: 21%;
+}
+
+.card:nth-child(4){
+    grid-column: span 2;
+    width: 100%;
+}
+
+.card:nth-child(4) h1{
+    bottom: 35%;
+}
+
+/* FARMER ID DETAILS */
+
+.Icard{
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+/* HERB DETAILS */
+
+.Hcard{
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 13px;
+    line-height: 120%;
+}
+
+/* GEO-TAGGING DETAILS */
+
+.Gcard{
+    position: absolute;
+    bottom: 300px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+/* FARM LAND DETAILS */
+
+.Fcard{
+    position: absolute;
+    bottom: 100px;
+    left: 5%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 13px;
+    line-height: 100%;
+}
+
+.Lab-Repors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80;
+    margin-top: 100px;
+}
+
+main1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+.content1{
+    margin-top: 20%;
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+.tag-box1{
+   position: relative; 
+   width: 18rem;
+   height: 2.5rem;
+   border-radius: 50px;
+   background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+   background-size: 200%;
+   animation: animationGradient 2.5s linear infinite;
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+@keyframes animationGradient {
+    to{
+        background-position: 200%;
+    }
+}
+.tag-box1 .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.5s ease;
+    cursor: pointer;
+}
+.tag-box1 .tag:hover{
+    color:#5300a0;
+}
+.content1 h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+.description1{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: gray;
+}
+.DNA{ /*giphy*/
+    position: relative;
+    scale: 1.4;
+    top: -200px;
+    right: -680px;
+    z-index: 1;
+}
+
+main2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.labpro{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin-top: 200px;
+    margin-bottom: 700px;
+}
+.labcard{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    gap: 10%;
+    justify-content: center;
+}
+.labvid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+    cursor: pointer;
+    min-width: 400px;
+    transition: 0.5s;
+    mix-blend-mode: exclusion;
+}
+.labvid video{
+    object-fit: cover;
+    width: 55%;
+    box-shadow: 0 0 30px lightgreen;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.labvid video:hover{
+    box-shadow: 0 0 40px rgba(00, 255, 0, 0.3);
+}
+.labinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    padding-left: 10%;    
+}
+.labinfo h1{
+    width: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    margin-bottom: 10px;
+    margin-top: 0;
+    max-width: 450px;
+}
+.labinfo p{
+    width: 90%;
+    max-width: 400px;
+    min-width: 300px;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+.gradien{
+background: linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd,#2a46ff,#0099ff, #008baa);
+background-size: 200%;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animate-gradien 2.5s linear infinite;
+}
+@keyframes animate-gradien{
+    to{
+        background-position: 200%;
+    }
+}
+.hover-sign{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100px;
+}
+.hover-sign::before,
+.hover-sign::after{
+    content:"👆";
+    text-align: center;
+    position: absolute;
+    font-size: 50px;
+    top: 20%;
+    left: 40%;
+    border-radius: 50%;
+    animation: hoverAnimation 3s ease-in-out infinite;
+}
+@keyframes hoverAnimation{
+    0%{
+        box-shadow: 0 0 5px lightgray;
+        transform: translate(100%, 50%) rotate(30deg);
+    }
+    100%{
+        box-shadow: 0 0 15px lightgray;
+        transform: translateX(80%, 50%) rotate(0deg);
+    }
+}
+.hover-sign.active{
+    display:none;
+}
+
+.About-us-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80;
+    margin-top: 30%;
+}
+
+.section-tittle{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.About-us-section img{
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+    margin-left: 400px;
+}
+
+.About-us-section p{
+    margin-top: 5%;
+    margin-left: 400px;
+}
+
+/* blur effect animation */
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+    0%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+    35%, 65%{
+        filter: blur(0);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
+
+/* auto display */
+
+.autoDisplay{
+    animation: autoDistplayAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes autoDistplayAnimation {
+    0%{
+        filter: blur(10px);
+        transform: translateY(-200px) scale(0);
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) scale(1);
+    }    
+}
+
+/* Fade in right */
+.fadeInRight{
+    animation: fadeInRightAnimation both;
+    animation-timeline: view();
+}
+
+@keyframes fadeInRightAnimation {
+    0%{
+        opacity: 0;
+        transform: translateX(-500px) scale(0.2);
+        filter: blur(20px);
+    }    
+    35%, 65%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+        filter: blur(0);
+    }
+    100%{
+        filter: blur(10px);
+    }
+}
+
+/* MEDIA YET TO BE DONE! FOR DIFFERENT SET OF MEDIA SIZE */
+/* @media (max-width: 1300px )  {
+    header{
+        padding: 1rem 0.5rem;
+    }
+
+    .content{
+        margin-top: 85%;
+    }
+    .Robot-3D{
+        scale: 0.65;
+        top: -10%;
+        right: 2%;
+    }
+}
+@media (max-width: 320px )  {
+    header{
+        padding: 1rem 0%;
+        text-size-adjust: 45%;
+    }
+    nav{
+        display: none;
+
+    }
+    header h1{
+        font-size: 2 rem;
+    }
+    .btn-signing{
+        padding: 0.6 rem 1.5 rem;
+    }
+
+    .content{
+        margin-top: 200%;
+        text-size-adjust: 50%;
+    }
+    .Robot-3D{
+        scale: 0.7;
+        top: -10%;
+        right: 10%;
+    }
+    .content{
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+    .tag-box{
+        width: 12rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .btn-signing-main{
+        height: ;
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+    }
+} */
